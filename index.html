@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <link rel="stylesheet" href="path/to/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+    <title>Shopping</title>
+</head>
+
+<body>
+
+
+    <ons-tabbar swipeable position="auto">
+        <ons-tab page="Home.html" label="Home" icon="ion-home, material:md-home" badge="7" active>
+        </ons-tab>
+        <ons-tab page="Cart.html" label="Cart" icon="md-shopping-cart">
+        </ons-tab>
+    </ons-tabbar>
+    </ons-page>
+
+    <template id="Home.html">
+        <ons-page id="tool">
+            <ons-toolbar style="background: rgb(197, 201, 206) ;">
+                <div class="left">
+                    <ons-toolbar-button icon="md-shopping-basket"></ons-toolbar-button>
+                </div>
+                <div class="center">
+                    <div align="center">Home</div>
+                </div>
+                <div class="right">
+                    <ons-toolbar-button icon="md-alert-octagon"></ons-toolbar-button>
+                </div>
+            </ons-toolbar>
+            <ons-page id="Home">
+                <p style="text-align: center; margin-top: 10px;">
+                    <ons-search-input placeholder="Search" onchange="ons.notification.alert('Searched for: ' + this.value)"></ons-search-input>
+                </p>
+                <ons-carousel swipeable auto-scroll overscrollable id="carousel" style="height: 300px;">
+                    <ons-carousel-item style="background: url('images/1.jpg') no-repeat center; background-size: contain">
+
+                    </ons-carousel-item>
+                    <ons-carousel-item style="background: url('images/2.jpg') no-repeat center; background-size: contain">
+
+                    </ons-carousel-item>
+                    <ons-carousel-item style="background: url('images/3.jpg') no-repeat center; background-size: contain">
+
+                    </ons-carousel-item>
+                </ons-carousel>
+                <ons-row fullscreen style="height:120" ; vertical-align "center";>
+                    <ons-col style="background: palevioletred">
+                        <p style="text-align: center; margin: 10px;">
+                            <ons-icon size="60px" icon="md-face"></ons-icon>
+                        </p>
+                        <p style="text-align: center; margin: 10px;">
+                            Beauty
+                        </p>
+                    </ons-col>
+                    <ons-col style="background: greenyellow">
+                        <p style="text-align: center; margin: 10px;">
+                            <ons-icon size="60px" icon="md-bike"></ons-icon>
+                        </p>
+                        <p style="text-align: center; margin: 10px;">
+                            Sports
+                        </p>
+                    </ons-col>
+                    <ons-col style="background: rgb(13, 195, 250)">
+                        <p style="text-align: center; margin: 10px;">
+                            <ons-icon size="60px" icon="md-laptop"></ons-icon>
+                        </p>
+                        <p style="text-align: center; margin: 10px;">
+                            Computer
+                        </p>
+                    </ons-col>
+                </ons-row>
+                <ons-row fullscreen style="height:120" ; vertical-align "center";>
+                    <ons-col style="background: rgb(208, 160, 224)">
+                        <p style="text-align: center; margin: 10px;">
+                            <ons-icon size="60px" icon="md-camera"></ons-icon>
+                        </p>
+                        <p style="text-align: center; margin: 10px;">
+                            Camera
+                        </p>
+                    </ons-col>
+                    <ons-col style="background: rgb(82, 199, 144)">
+                        <p style="text-align: center; margin: 10px;">
+                            <ons-icon size="60px" icon="md-seat"></ons-icon>
+                        </p>
+                        <p style="text-align: center; margin: 10px;">
+                            Furniture
+                        </p>
+                    </ons-col>
+                    <ons-col style="background: rgb(64, 152, 211)">
+                        <p style="text-align: center; margin: 10px;">
+                            <ons-icon size="60px" icon="md-smartphone-iphone"></ons-icon>
+                        </p>
+                        <p style="text-align: center; margin: 10px;">
+                            Smartphone
+                        </p>
+                    </ons-col>
+                </ons-row>
+                <ons-row fullscreen style="height:120" ; vertical-align "center";>
+                    <ons-col style="background: rgb(222, 191, 228)">
+                        <p style="text-align: center; margin: 10px;">
+                            <ons-icon size="60px" icon="md-toys"></ons-icon>
+                        </p>
+                        <p style="text-align: center; margin: 10px;">
+                            Toy
+                        </p>
+                    </ons-col>
+                    <ons-col style="background: rgb(138, 238, 179)">
+                        <p style="text-align: center; margin: 10px;">
+                            <ons-icon size="60px" icon="md-wrench"></ons-icon>
+                        </p>
+                        <p style="text-align: center; margin: 10px;">
+                            Hardware
+                        </p>
+                    </ons-col>
+                    <ons-col style="background: rgb(123, 171, 235)">
+                        <p style="text-align: center; margin: 10px;">
+                            <ons-icon size="60px" icon="md-floppy"></ons-icon>
+                        </p>
+                        <p style="text-align: center; margin: 10px;">
+                            Appliance
+                        </p>
+                    </ons-col>
+                </ons-row>
+
+            </ons-page>
+    </template>
+
+    <template id="Cart.html">
+        <ons-page id="tool">
+            <ons-toolbar style="background: rgb(197, 201, 206) ;">
+                <div class="left">
+                    <ons-toolbar-button icon="md-shopping-basket"></ons-toolbar-button>
+                </div>
+                <div class="center">
+                    <div align="center">CART</div>
+                </div>
+                <div class="right">
+                    <ons-toolbar-button icon="md-alert-octagon"></ons-toolbar-button>
+                </div>
+            </ons-toolbar>
+            <ons-page id="Cart">
+                <ons-list-header>SHOPPING CART</ons-list-header>
+                <ons-list-item>
+                    <div class="left">
+                        <img class="list-item__thumbnail" src="images\item1.jpg">
+                    </div>
+                    <div class="center">
+                        <span class="list-item__title">Apple Watch Series 3 GPS 42mm Gray</span>
+                        <span class="list-item__subtitle" style="color: blue">฿12,650.00</span>
+                    </div>
+                    <div class="right">
+                        <ons-icon size="20px" icon="md-close-circle"></ons-icon>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="left">
+                        <img class="list-item__thumbnail" src="images\item2.jpg">
+                    </div>
+                    <div class="center">
+                        <span class="list-item__title">MICROLAB SPEAKER 2.1</span>
+                        <span class="list-item__subtitle" style="color: blue">฿1,570.00</span>
+                    </div>
+                    <div class="right">
+                        <ons-icon size="20px" icon="md-close-circle"></ons-icon>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="left">
+                        <img class="list-item__thumbnail" src="images\item3.jpg">
+                    </div>
+                    <div class="center">
+                        <span class="list-item__title">NIKE AIR MAX 90 Black-Gray-red Size 40 </span>
+                        <span class="list-item__subtitle" style="color: blue">฿2,990.00</span>
+                    </div>
+                    <div class="right">
+                        <ons-icon size="20px" icon="md-close-circle"></ons-icon>
+                    </div>
+                </ons-list-item>
+                <section style="padding: 8px">
+                    <ons-button modifier="large">PROCEED TO PAY</ons-button>
+                </section>
+            </ons-page>
+    </template>
+</body>
+
+</html>
